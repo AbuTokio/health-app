@@ -36,9 +36,6 @@
 }
 
 /* # DEBUGGING */
-body {
-  height: 500vh;
-}
 
 /* # GENERAL STYLINGS */
 
@@ -326,6 +323,7 @@ main .hero-section .hero-container .hero-footer-container p span {
 /* next section 150px below */
 
 main .features-section {
+  border: 1px solid purple;
   margin-top: 9.4rem;
   padding: 0 10.1rem;
   display: flex;
@@ -338,6 +336,73 @@ main .features-section {
 /* + FEATURES TEXT CONTAINER */
 
 main .features-section .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0 18.75rem;
+  text-align: center;
+}
+
+main .features-section .text-container h2 {
+  font-size: 3.1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--darkgreen_15);
+}
+
+main .features-section .text-container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--grey_30);
+}
+
+/* + CARDS CONTAINER */
+
+main .features-section .cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.9rem;
+}
+
+/* % CARD-WRAPPER */
+
+main .features-section .cards-container .card-wrapper {
+  padding: 2.5rem 3.1rem;
+  border: 1px solid var(--green_85);
+  border-radius: 0.75rem;
+  background-color: var(--green_95);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main .features-section .cards-container .card-wrapper .card-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+main .features-section .cards-container .card-wrapper .card-title-wrapper img {
+  padding: 0.9rem;
+  height: 4.25rem;
+  width: 4.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--green_70);
+}
+
+main .features-section .cards-container .card-wrapper .card-title-wrapper h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--darkgreen_15);
+}
+
+main .features-section .cards-container .card-wrapper p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--grey_30);
 }
 
 /* next section 191px below */
