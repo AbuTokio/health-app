@@ -24,6 +24,7 @@
   --light-lime-green: #d7ef9a;
   --light-grey: #d9d9d9;
   --pastel-lime: #eef8d3;
+  --pastel-light-lime: #fafdf2;
   --off-white: #f2f2f2;
 
   /* ~ FONT */
@@ -45,6 +46,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pastel-light-lime);
 }
 
 a {
@@ -160,3 +165,179 @@ header .navbar .navbar-container a button {
   border: none;
   border-radius: 0.5rem;
 }
+
+/* # MAIN */
+
+/* ~ HERO SECTION */
+
+main .hero-section {
+  display: flex;
+  gap: 3.2rem;
+  padding-right: 10.1rem;
+}
+
+/* + HERO IMG */
+
+main .hero-section #hero-img {
+  height: 826px;
+  width: 945px;
+  background: url("../assets/img/hero-bg.png");
+  background-color: var(--green);
+  /* object-fit: cover; */
+  border-bottom-right-radius: 50px;
+}
+
+/* + HERO CONTAINER */
+
+main .hero-section .hero-container {
+  width: 759px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4.4rem;
+}
+
+/* % HERO MAIN CONTAINER */
+
+main .hero-section .hero-container .hero-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-text h3 {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid var(--green_70);
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--darkgreen_15);
+  display: inline;
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-text h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--darkgreen_15);
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--grey_30);
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-buttons button {
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--darkgreen_15);
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-buttons button:first-of-type {
+  background-color: var(--green_70);
+  border: none;
+}
+
+main .hero-section .hero-container .hero-main-container .hero-main-buttons button:last-of-type {
+  background-color: var(--green_95);
+  border: 1px solid var(--green_70);
+}
+
+/* % HERO FOOTER CONTAINER */
+
+main .hero-section .hero-container .hero-footer-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+main .hero-section .hero-container .hero-footer-container .customer-images-container {
+  width: 130px;
+  height: 66px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--green_70);
+  border-radius: 3.6rem;
+  display: flex;
+}
+
+main .hero-section .hero-container .hero-footer-container .customer-images-container #customer-image {
+  height: 50px;
+  width: 50px;
+  background: url("../assets/img/picture-customer-1.png") center/cover no-repeat;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  /* left: 50%; */
+  transform: translateY(-50%);
+}
+
+main .hero-section .hero-container .hero-footer-container .customer-images-container #customer-image::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: url("../assets/img/picture-customer-2.png") center/cover no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(60%, -50%);
+}
+
+main .hero-section .hero-container .hero-footer-container .customer-images-container #customer-image::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  background: url("../assets/img/picture-customer-3.png") center/cover no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(120%, -50%);
+}
+
+main .hero-section .hero-container .hero-footer-container p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--darkgreen_15);
+}
+
+main .hero-section .hero-container .hero-footer-container p span {
+  color: var(--darkgreen_30);
+}
+
+/* ~ FEATURES SECTION */
+
+/* next section 150px below */
+
+main .features-section {
+  margin-top: 9.4rem;
+  padding: 0 10.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+/* + FEATURES TEXT CONTAINER */
+
+main .features-section .text-container {
+}
+
+/* next section 191px below */
