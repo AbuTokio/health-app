@@ -1,96 +1,162 @@
+/* # ROOT */
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/Urbanist-VariableFont_wght.ttf");
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* ~ COLORS */
+  --green_70: #cbea7b;
+  --green_85: #e5f5bd;
+  --green: #dcf1a7;
+  --darkgreen_15: #1a3129;
+  --white: #ffff;
+  --grey_30: #4c4c4d;
+  --green_95: #f6fbe9;
+  --darkgreen_20: #234338;
+  --darkgreen_30: #356554;
+  --grey_15: #262626;
+  --grey_60: #98989a;
+  --darkgreen: #2c5446;
+  --lightgrey: #cdcdcd;
+  --darkgrey: #333333;
+  --light-lime-green: #d7ef9a;
+  --light-grey: #d9d9d9;
+  --pastel-lime: #eef8d3;
+  --off-white: #f2f2f2;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* ~ FONT */
+  --primary-font-family: "Urbanist";
+  --primary-font-size: 16px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+}
+
+/* # DEBUGGING */
+body {
+  height: 500vh;
+}
+
+/* # GENERAL STYLINGS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:active {
+  opacity: 0.9;
+}
+
+/* # HEADER */
+
+/* ~ BANNER */
+
+header {
+  padding: 0.9rem 10.1rem;
+  height: 10.4rem;
+  width: 100vw;
+  background-color: var(--darkgreen_15);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--pastel-lime);
+}
+
+header .banner {
+  height: 3rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: var(--darkgreen_20);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--darkgreen);
+  border-radius: 6px;
+}
+
+header .banner .banner-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header .banner .banner-description p {
+  display: flex;
+  gap: 0.25rem;
+}
+
+header .banner .banner-description p span {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 150%;
+  height: 100%;
+}
+
+header .banner #banner-link {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: url("../public/assets/icons/icon-arrow-right.svg") center/cover no-repeat;
+}
+
+/* ~ NAVBAR */
+
+header .navbar {
+  height: 3.8rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .navbar .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+header .navbar .navbar-container nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+header .navbar .navbar-container nav a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--white);
+}
+
+header .navbar .navbar-container a button {
+  /* width: 8.5rem;
+  height: 3.4rem; */
+  padding: 0.9rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--grey_15);
+  background-color: var(--green_70);
+  border: none;
+  border-radius: 0.5rem;
 }

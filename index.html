@@ -1,13 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Health App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <section class="banner">
+        <img src="./assets/img/abstract-left.svg" alt="abstract-left" />
+        <div class="banner-description">
+          <p>
+            <img src="./assets/icons/icon-cricket-ball.svg" alt="icon-cricket-ball" />
+            <span>Join Our Personalized Nutrition Demo For Free</span>
+          </p>
+          <a href="#" id="banner-link"></a>
+        </div>
+        <img src="./assets/img/abstract-right.svg" alt="abstract-right" />
+      </section>
+      <section class="navbar">
+        <img src="./assets/icons/logo-full.svg" alt="logo-full" />
+        <div class="navbar-container">
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Process</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+          </nav>
+          <a href="#"><button type="button">Contact Us</button></a>
+        </div>
+      </section>
+    </header>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
