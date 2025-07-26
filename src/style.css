@@ -318,13 +318,11 @@ main .hero-section .hero-container .hero-footer-container p span {
   color: var(--darkgreen_30);
 }
 
-/* ~ FEATURES SECTION */
+/* ~ MAIN SECTION */
 
 /* next section 150px below */
 
-main .features-section {
-  border: 1px solid purple;
-  margin-top: 9.4rem;
+main .main-section {
   padding: 0 10.1rem;
   display: flex;
   flex-direction: column;
@@ -333,9 +331,9 @@ main .features-section {
   gap: 5rem;
 }
 
-/* + FEATURES TEXT CONTAINER */
+/* + TEXT CONTAINER */
 
-main .features-section .text-container {
+main .main-section .text-container {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -343,18 +341,24 @@ main .features-section .text-container {
   text-align: center;
 }
 
-main .features-section .text-container h2 {
+main .main-section .text-container h2 {
   font-size: 3.1rem;
   font-weight: 700;
   line-height: 150%;
   color: var(--darkgreen_15);
 }
 
-main .features-section .text-container p {
+main .main-section .text-container p {
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 150%;
   color: var(--grey_30);
+}
+
+/* ~ FEATURES SECTION */
+
+main .features-section {
+  margin-top: 9.4rem;
 }
 
 /* + CARDS CONTAINER */
@@ -406,3 +410,9 @@ main .features-section .cards-container .card-wrapper p {
 }
 
 /* next section 191px below */
+
+/* ~ CALCULATOR SECTION */
+
+main .calculator-section {
+  margin-top: 12rem;
+}

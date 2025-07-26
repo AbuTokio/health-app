@@ -62,7 +62,7 @@
           </div>
         </article>
       </section>
-      <section class="features-section">
+      <section class="features-section main-section">
         <article class="text-container">
           <h2>Features</h2>
           <p>
@@ -141,6 +141,53 @@
               nutritionists will equip you with the knowledge and tools to make informed choices for long-term success.
             </p>
           </div>
+        </article>
+      </section>
+      <section class="calculator-section main-section">
+        <article class="text-container">
+          <h2>Test your daily Calorie Requirement</h2>
+          <p>
+            To determine your daily calorie requirement, we need some information about your age, gender, weight, height
+            and activity level. Enter this information to calculate your individual requirements.
+          </p>
+        </article>
+        <article class="calculator-container">
+          <form>
+            <div>
+              <label for="body-size">Body size (in cm)</label>
+              <input type="text" name="body-size" id="body-size" />
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input type="number" name="age" id="age" />
+            </div>
+            <div>
+              <label for="weight">Weight (in kg)</label>
+              <input type="number" name="weight" id="weight" />
+            </div>
+            <div>
+              <label for="activity">Activity</label>
+              <select name="activity" id="activity">
+                <option value="0">Sleep</option>
+                <option value="1">Just sitting and lying down</option>
+                <option value="2">
+                  Exclusively sedentary work with little or no physical activity in leisure time...
+                </option>
+                <option value="3">Sedentary work with occasional walking or standing</option>
+                <option value="4">Mainly walking or standing work</option>
+                <option value="5">Physically demanding professional work</option>
+              </select>
+            </div>
+            <div>
+              <p>Gender</p>
+              <input type="radio" name="gender" id="female" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="male" />
+              <label for="male">Male</label>
+            </div>
+            <button type="button">Calculate</button>
+          </form>
+          <div class="calculator-output"></div>
         </article>
       </section>
     </main>
