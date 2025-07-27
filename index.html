@@ -153,19 +153,19 @@
         </article>
         <article class="calculator-container">
           <form>
-            <div>
+            <div class="form-element-wrapper">
               <label for="body-size">Body size (in cm)</label>
               <input type="text" name="body-size" id="body-size" />
             </div>
-            <div>
+            <div class="form-element-wrapper">
               <label for="age">Age</label>
               <input type="number" name="age" id="age" />
             </div>
-            <div>
+            <div class="form-element-wrapper">
               <label for="weight">Weight (in kg)</label>
               <input type="number" name="weight" id="weight" />
             </div>
-            <div>
+            <div class="form-element-wrapper">
               <label for="activity">Activity</label>
               <select name="activity" id="activity">
                 <option value="0">Sleep</option>
@@ -178,16 +178,37 @@
                 <option value="5">Physically demanding professional work</option>
               </select>
             </div>
-            <div>
+            <div class="form-element-wrapper">
               <p>Gender</p>
-              <input type="radio" name="gender" id="female" />
-              <label for="female">Female</label>
-              <input type="radio" name="gender" id="male" />
-              <label for="male">Male</label>
+              <div class="gender-wrapper">
+                <div>
+                  <input type="radio" name="gender" id="female" value="female" />
+                  <label for="female">Female</label>
+                </div>
+                <div>
+                  <input type="radio" name="gender" id="male" value="male" />
+                  <label for="male">Male</label>
+                </div>
+              </div>
             </div>
-            <button type="button">Calculate</button>
+            <div class="form-element-wrapper">
+              <button type="button" id="calculate-btn">Calculate</button>
+            </div>
+            <div class="calculator-output">
+              <div class="output-headline">
+                <p>kcal</p>
+                <p>kJ</p>
+              </div>
+              <div class="output-body">
+                <p>Basal Metabolic Rate</p>
+                <p id="output-bmr-kcal"></p>
+                <p id="output-bmr-kj"></p>
+                <p>Total Daily Energy Expenditure</p>
+                <p id="output-tdee-kcal"></p>
+                <p id="output-tdee-kj"></p>
+              </div>
+            </div>
           </form>
-          <div class="calculator-output"></div>
         </article>
       </section>
     </main>
