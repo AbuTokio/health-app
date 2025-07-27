@@ -35,8 +35,6 @@
   font-size: var(--primary-font-size);
 }
 
-/* # DEBUGGING */
-
 /* # GENERAL STYLINGS */
 
 * {
@@ -60,7 +58,7 @@ button {
 }
 
 button:active {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 /* # HEADER */
@@ -320,8 +318,6 @@ main .hero-section .hero-container .hero-footer-container p span {
 
 /* ~ MAIN SECTION */
 
-/* next section 150px below */
-
 main .main-section {
   padding: 0 10.1rem;
   display: flex;
@@ -409,8 +405,6 @@ main .features-section .cards-container .card-wrapper p {
   color: var(--grey_30);
 }
 
-/* next section 191px below */
-
 /* ~ CALCULATOR SECTION */
 
 main .calculator-section {
@@ -432,7 +426,7 @@ main .calculator-section .calculator-container {
 main .calculator-section .calculator-container form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 6rem);
+  grid-template-rows: repeat(4, 6rem);
   gap: 2rem;
 }
 
@@ -559,12 +553,12 @@ main .calculator-section .calculator-container form .form-element-wrapper:nth-of
 /* % CALCULATOR OUTPUT */
 
 main .calculator-section .calculator-container form .calculator-output {
+  display: none;
   grid-column: 1 / 3;
   grid-row: 5 / 6;
   background-color: var(--white);
   width: 54rem;
   justify-self: center;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -605,4 +599,88 @@ main .calculator-section .calculator-container form .calculator-output .output-b
   align-items: center;
   width: 100%;
   padding-left: 2rem;
+}
+
+/* ~ FOOTER */
+
+footer {
+  margin-top: 8rem;
+  padding: 3.1rem 10.1rem;
+  width: 100vw;
+  background-color: var(--darkgreen_15);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+  border-top: 1px solid var(--grey_15);
+}
+
+/* + QUICKLINK SECTION */
+
+footer .quicklinks-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .quicklinks-section .quicklinks-container {
+  display: flex;
+  gap: 1.6rem;
+}
+
+footer .quicklinks-section .quicklinks-container a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--white);
+}
+
+footer .quicklinks-section div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+footer .quicklinks-section div:last-of-type a {
+  background-color: var(--darkgreen_20);
+  height: 3.9rem;
+  width: 3.9rem;
+  padding: 0.9rem;
+  border-radius: 50%;
+}
+
+/* + CONTACT INFO SECTION */
+
+footer .contact-info-section {
+  padding: 1rem 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  background-color: var(--darkgreen_20);
+  border: 1px solid var(--darkgreen);
+  border-radius: 0.5rem;
+}
+
+footer .contact-info-section .contact-container {
+  display: flex;
+  gap: 1.25rem;
+}
+
+footer .contact-info-section .contact-container div {
+  padding: 0.9rem;
+  border: 1px solid var(--darkgreen);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+footer .contact-info-section p {
+  color: var(--off-white);
 }

@@ -1,11 +1,13 @@
 import "./style.css"
 
+const calculatorFormElement = document.querySelector("#calculator-form")
 const inputBodySizeElement = document.querySelector("#body-size")
 const inputAgeElement = document.querySelector("#age")
 const inputWeightElement = document.querySelector("#weight")
 const inputActivityElement = document.querySelector("#activity")
 const inputGenderElement = document.getElementsByName("gender")
 const calculateButton = document.querySelector("#calculate-btn")
+const outputElement = document.querySelector(".calculator-output")
 const outputBMRkcal = document.querySelector("#output-bmr-kcal")
 const outputBMRkJ = document.querySelector("#output-bmr-kj")
 const outputTDEEkcal = document.querySelector("#output-tdee-kcal")
@@ -57,7 +59,7 @@ function getBMR(weight, size, age, gender) {
   return 0
 }
 
-calculateButton.addEventListener("click", function (e) {
+calculateButton.addEventListener("click", function () {
   const bodySize = Number(inputBodySizeElement.value)
   const age = Number(inputAgeElement.value)
   const weight = Number(inputWeightElement.value)
@@ -68,7 +70,8 @@ calculateButton.addEventListener("click", function (e) {
 
   outputBMRkcal.innerText = bmr.toFixed(2)
   outputBMRkJ.innerText = (bmr * 4.184).toFixed(2)
-
   outputTDEEkcal.innerText = tdee.toFixed(2)
   outputTDEEkJ.innerText = (tdee * 4.184).toFixed(2)
+  calculatorFormElement.style.gridTemplateRows = "repeat(5, 6rem);"
+  outputElement.style.display = "flex"
 })
